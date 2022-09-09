@@ -1,0 +1,43 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Goldenware, Roblox", "Synapse")
+
+--Main
+local Main = Window:NewTab("Main")
+local MainSection = Main:NewSection("Most Useful")
+
+MainSection:NewSlider("Run Speed", "Makes player run to set speed", 500, 16, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+
+MainSection:NewSlider("Jump Strength", "Jump high", 350, 50, function(s) -- 500 (MaxValue) | 0 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+end)
+
+MainSection:NewButton("Reset Default", "Resets walk and jump speed", function()
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+end)
+
+MainSection:NewButton("Fly (E)", "Flies", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Levixydev/fly-/main/fly"))()
+end)
+
+
+--DaHood
+local DaHood = Window:NewTab("Dahood")
+local DaHoodSection = DaHood:NewSection("Aimbots")
+
+DaHoodSection:NewButton("Silent Aim (Q)", "Hits without aim", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/0nly6Ex/wfwf/main/aimbot"))()
+end)
+
+DaHoodSection:NewButton("AimLock", "Hits auto aim", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Levixydev/w/main/f"))()
+end)
+
+
+
+
+
+
+
